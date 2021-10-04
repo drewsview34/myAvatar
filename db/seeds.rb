@@ -20,22 +20,22 @@ DATA = {
     ["Cole Sand", "password"],
     ["Quvenzhané Wallis", "password"]
   ],
-  :attraction_keys =>
-   ["name", "nausea_rating", "happiness_rating", "tickets", "min_height"],
-  :attractions => [
-    ["Scrambler Ride", 2, 2, 2, 36],
-    ["Miniature Railroad", 0, 1, 2, 32],
-    ["Merry-Go-Round", 1, 1, 1, 30],
-    ["Roller Coaster", 1, 3, 4, 54],
-    ["Swinging Ship", 2, 2, 2, 36],
-    ["Go Karts", 1, 2, 3, 36],
-    ["Haunted Mansion", 1, 1, 1, 30],
-    ["Ferris Wheel", 1, 1, 2, 36],
-    ["Teacups Ride", 3, 1, 1, 28]
+  :option_keys =>
+   ["name", "super_power", "super_weakness"],
+  :options => [
+    ["Batman", "technology","mortal"],
+    ["Superman", "strength", "lois"],
+    ["Hulk", "anger", "therapy"],
+    ["Captain America", "strength", "mortal"],
+    ["Spiderman", "spider like abilites","love"],
+    ["Iron Man", "technology", "arrogance"],
+    ["Godzilla", "radiation", "humans"],
+    ["Wolverine", "reflexes", "sensitive"],
+    ["Black Panther", "superhuman senses", "nationalism"]
   ],
   :admins => [
-    "Mary Elitch Long",
-    "John Elitch"
+    "Andrew Hinojosa",
+    "Ryna Truong"
   ]
 }
 
