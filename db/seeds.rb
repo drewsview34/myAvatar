@@ -42,7 +42,7 @@ DATA = {
 def main
   make_users
   make_admin
-  make_attractions_and_rides
+  make_options_and_avatars
 end
 
 def make_users
@@ -61,19 +61,14 @@ def make_admin
   end
 end
 
-def make_attractions_and_rides
-  DATA[:attractions].each do |attraction|
-    new_attraction = Attraction.new
-    attraction.each_with_index do |attribute, i|
-      new_attraction.send(DATA[:attraction_keys][i] + "=", attribute)
+def make_opttions_and_avatars
+  DATA[:options].each do |option|
+    new_option = Option.new
+    option.each_with_index do |attribute, i|
+      new_option.send(DATA[:option_keys][i] + "=", attribute)
     end
-    rand(1..8).times do
-      customers = []
-      User.all.each {|u| customers << u if u.admin != true}
-      new_attraction.users << customers[rand(0...customers.length)]
-    end
-    new_attraction.users.each {|c| c.save}
-    new_attraction.save
+    new_option.users.each {|c| c.save}
+    new_option.save
   end
 end
 
