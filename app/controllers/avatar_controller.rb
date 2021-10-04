@@ -1,4 +1,4 @@
-class AvatarsController < ApplicationController
+class AvatarController < ApplicationController
 
     def index
 
