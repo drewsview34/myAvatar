@@ -1,0 +1,14 @@
+<% if flash[:message] %>
+    <p><%= flash[:message] %></p>
+<% end %>
+
+<h1><%= current_user.name %></h1>
+
+<% if @user.admin? %>
+    <%= "ADMIN" if @user.admin %>
+<% end %>
+
+Name: <%= @user.name %>
+
+<%= link_to 'See Options', options_path %>
+<%= link_to 'Log Out', logout_path, method: "delete" %>
