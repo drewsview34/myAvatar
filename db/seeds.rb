@@ -61,7 +61,7 @@ def make_admin
   end
 end
 
-def make_opttions_and_avatars
+def make_options_and_avatars
   DATA[:options].each do |option|
     new_option = Option.new
     option.each_with_index do |attribute, i|
