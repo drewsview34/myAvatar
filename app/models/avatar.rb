@@ -1,4 +1,4 @@
-class Avatar < ApplicationRecord::Base
+class Avatar < ApplicationRecord
 
     belongs_to :option
     belongs_to :user
