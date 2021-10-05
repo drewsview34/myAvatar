@@ -1,0 +1,15 @@
+<%= @option.name %>
+
+<p>Name: <%= @option.name %></p>
+<p>Name: <%= @option.super_power %></p>
+<p>Name: <%= @option.super_weakness %></p>
+
+<%= form_for @avatar do |f| %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :option_id %>
+    <% if current_user.admin? %>
+        <%= link_to 'Edit Options', edit_option_path(@option) %>
+    <% else %>
+        <%= f.submit "Keep Avatar"
+    <% end %>
+<% end %>

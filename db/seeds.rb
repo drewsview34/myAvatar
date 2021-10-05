@@ -61,11 +61,16 @@ def make_admin
   end
 end
 
-def make_opttions_and_avatars
+def make_options_and_avatars
   DATA[:options].each do |option|
     new_option = Option.new
     option.each_with_index do |attribute, i|
       new_option.send(DATA[:option_keys][i] + "=", attribute)
+    end
+    rand(1..8).times do
+      avatars = []
+      User.all.each{|u| avatars << u if u.admin != true}
+      new_option.users << avatars[rand(0...avatars.length)]
     end
     new_option.users.each {|c| c.save}
     new_option.save

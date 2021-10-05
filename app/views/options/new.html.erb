@@ -1,0 +1,14 @@
+<%= form_for @option do |f| %>
+
+    <% f.label :name %>
+    <% f.text_field :name %><br>
+    
+    <% f.label :super_power %>
+    <% f.text_field :super_power %><br>
+
+    <% f.label :super_weakness %>
+    <% f.text_field :super_weakness %><br>
+
+    <%= f.submit %>
+
+<% end %>

@@ -1,23 +1,18 @@
 class AvatarsController < ApplicationController
 
-    def index
-
+    def create
+        @avatar = Avatar.create(avatar_params)
+        redirect_to user_path(@avatar.user)
     end
 
-    def new
-
+    def update
+        @avatar = Avatar.find(params[:id])
     end
 
-    def show
-
-    end
-
-    def destroy
-
-    end
-
-    def edit
-
+    private
+    
+    def avatar_params
+        params.require(:avatar).permit(:option_id, :user_id)
     end
 
 end
