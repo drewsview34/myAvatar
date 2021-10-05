@@ -1,11 +1,12 @@
 class AvatarsController < ApplicationController
 
     def create
-
+        @avatar = Avatar.create(avatar_params)
+        redirect_to user_path(@avatar.user)
     end
 
     def update
-
+        @avatar = Avatar.find(params[:id])
     end
 
     private
