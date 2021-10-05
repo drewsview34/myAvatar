@@ -1,23 +1,17 @@
 class AvatarsController < ApplicationController
 
-    def index
+    def create
 
     end
 
-    def new
+    def update
 
     end
 
-    def show
-
-    end
-
-    def destroy
-
-    end
-
-    def edit
-
+    private
+    
+    def avatar_params
+        params.require(:avatar).permit(:option_id, :user_id)
     end
 
 end
