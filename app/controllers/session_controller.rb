@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class SessionController < ApplicationController
 
     def signin
         @user = User.find_by(name: params[:user_name])
