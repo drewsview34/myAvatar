@@ -1,10 +1,10 @@
 <% if current_user.admin? %>
     <%= link_to "Options", new_attraction_path %><br>
-    <% options.each do |option| %>
+    <% @options.each do |option| %>
         <%= link_to "Show #{option.name}", option_path(option) %><br>
     <% end %>
 <% else %>
-    <% options.each do |option| %>
+    <% @options.each do |option| %>
         <%= link_to "Go on #{option.name}", option_path(option) %><br>
     <% end %>
 <% end %>

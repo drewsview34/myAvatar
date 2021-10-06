@@ -2,7 +2,7 @@ class AvatarsController < ApplicationController
 
     def create
         @avatar = Avatar.create(avatar_params)
-        redirect_to user_path(@avatar.user)
+        redirect_to user_path(@user)
     end
 
     def update
