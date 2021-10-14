@@ -8,8 +8,9 @@
     <%= f.hidden_field :user_id %>
     <%= f.hidden_field :option_id %><br>
     <% if current_user.admin? %>
-        <%= link_to 'Edit Options', edit_option_path(@option) %>
-    <% else %>
+                <%= link_to 'Edit Option', edit_option_path(@option) %>
         <%= f.submit "Keep Avatar" %>
+    <% else %>
+        "Your not admin"
     <% end %>
 <% end %>

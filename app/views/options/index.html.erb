@@ -1,5 +1,6 @@
+
 <% if current_user.admin? %>
-    <%= link_to "Options", new_attraction_path %><br>
+    <%= link_to "Options", new_option_path %><br>
     <% @options.each do |option| %>
         <%= link_to "Show #{option.name}", option_path(option) %><br>
     <% end %>

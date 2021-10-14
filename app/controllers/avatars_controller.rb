@@ -12,7 +12,7 @@ class AvatarsController < ApplicationController
     private
     
     def avatar_params
-        params.require(:avatar).permit(:option_id, :user_id)
+        params.require(:avatar).permit(:option_id, :user_id, )
     end
 
 end

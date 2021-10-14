@@ -8,7 +8,7 @@
 
 DATA = {
   :user_keys =>
-    ["name", "password"],
+    ["name", "password_digest", "admin"],
   :users => [
     ["Max Charles", "password"],
     ["Skai Jackson", "password"],
