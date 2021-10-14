@@ -22,6 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# bootstrap
+gem 'bootstrap-sass', '3.3.7'
+
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.2'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

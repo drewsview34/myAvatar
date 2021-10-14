@@ -3,12 +3,14 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  get 'signin', to: 'sessions#signin'
-  post '/signin', to: 'sessions#signin'
-  get 'sessions/new', to: 'sessions#new'
-  get '/sessions/create', to: 'sessions#create'
-  get '/sessions/destroy', to: 'sessions#destroy'
-  delete '/logout', to: 'sessions#destroy'
+  get '/signin', to: 'session#signin'
+  get '/signin', to: 'session#signin'
+  post '/signin', to: 'session#signin'
+  get '/session/new', to: 'session#new'
+  get '/session/create', to: 'session#create'
+  get '/logout', to: 'session#destroy'
+  delete '/logout', to: 'session#destroy'
+
 
   resources :avatars
   resources :options

@@ -8,7 +8,7 @@
 
 DATA = {
   :user_keys =>
-    ["name", "password"],
+    ["name", "password", "admin"],
   :users => [
     ["Max Charles", "password"],
     ["Skai Jackson", "password"],
@@ -57,7 +57,7 @@ end
 
 def make_admin
   DATA[:admins].each do |name|
-    User.create(name: name, admin: true, password: 'password')
+    User.create(name: name, admin: true, password_digest: 'password')
   end
 end
 

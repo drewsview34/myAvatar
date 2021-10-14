@@ -2,7 +2,7 @@ class AvatarsController < ApplicationController
 
     def create
         @avatar = Avatar.create(avatar_params)
-        redirect_to user_path(@avatar.user)
+        redirect_to user_path(@user)
     end
 
     def update
@@ -12,7 +12,7 @@ class AvatarsController < ApplicationController
     private
     
     def avatar_params
-        params.require(:avatar).permit(:option_id, :user_id)
+        params.require(:avatar).permit(:option_id, :user_id, )
     end
 
 end

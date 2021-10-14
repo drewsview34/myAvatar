@@ -6,10 +6,11 @@
 
 <%= form_for @avatar do |f| %>
     <%= f.hidden_field :user_id %>
-    <%= f.hidden_field :option_id %>
+    <%= f.hidden_field :option_id %><br>
     <% if current_user.admin? %>
-        <%= link_to 'Edit Options', edit_option_path(@option) %>
+                <%= link_to 'Edit Option', edit_option_path(@option) %>
+        <%= f.submit "Keep Avatar" %>
     <% else %>
-        <%= f.submit "Keep Avatar"
+        "Your not admin"
     <% end %>
 <% end %>

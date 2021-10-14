@@ -1,5 +1,5 @@
 <% if flash[:message] %>
-    <p><%= flash[:message] %></p>
+    <%= flash[:message] %>
 <% end %>
 
 <h1><%= current_user.name %></h1>
@@ -11,4 +11,4 @@
 Name: <%= @user.name %>
 
 <%= link_to 'See Options', options_path %>
-<%= link_to 'Log Out', logout_path, method: "delete" %>
+<%= link_to 'Log Out', logout_path, method: 'delete' %>
